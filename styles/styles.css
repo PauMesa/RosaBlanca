@@ -342,6 +342,25 @@ footer{
         margin: 0%;
         font-size: 20px;
     }
+
+    #tituloAbUs{
+        animation-duration: 3s;
+        animation-name: tituloAnimado;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes tituloAnimado {
+        0% {
+        }
+        50%{
+            letter-spacing: 10px;
+        }
+        100%{
+            letter-spacing: 2px;
+        }
+
+    }
+
     .historia a p {
         font-weight: bold;
         padding: 10px; 
@@ -367,7 +386,7 @@ footer{
         display: grid;
         place-content: center;
     }
-
+    
     .instrucciones ul{
         list-style-type: circle;
         font-size: 20px;
