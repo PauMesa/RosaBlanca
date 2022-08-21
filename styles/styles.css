@@ -387,10 +387,16 @@ footer{
 
     /*comienza Boutique*/
 
+    .compras{
+        display: grid;
+        grid-template-columns: 50% 50%;
+       
+    }
+
     .compras div{
         display: grid;
-        grid-template-columns: 300px 200px 100px;
-        width: 800px;
+        grid-template-columns: 300px 100px 100px;
+        width: 500px;
         height: 400px;
         place-content: center;
         background-color: rgb(163, 154, 146);
@@ -409,7 +415,9 @@ footer{
     .compras div ul{
         list-style: none;
         padding-top: 40px;
-        font-size: 40px;
+        font-size: 20px;
+        height: 30px;
+        margin: 5px;
     }
 
     .compras div ul li button{
@@ -419,8 +427,9 @@ footer{
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 20px;
+        font-size: 10px;
         padding: 10px;
+        height: 30px;
     }
 
     .compras div ul li select{
@@ -430,13 +439,35 @@ footer{
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 20px;
+        font-size: 10px;
         padding: 10px;
+        height: 30px;
     }
     .galeriaVista{
         display: grid;
         place-content: center;
     }
+    .tituloGaleria{
+        display: grid;
+        grid-template-columns: 33.3% 33.3% 33.4%;
+        justify-content: center;
+    }
+    .sale{
+        animation-duration: 1.5s;
+        animation-name: cartel;
+        animation-iteration-count: infinite;
+        }
+    @keyframes cartel {
+        0% {
+        }
+        50%{
+            letter-spacing: 10px;
+            background-color: rgb(5, 142, 217);
+            color: rgb(244, 235, 217);
+        }
+        100%{
+            letter-spacing: 2px;
+        }
 
     /*termina Boutique*/
 
