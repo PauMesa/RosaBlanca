@@ -19,6 +19,10 @@ h2{
     padding-bottom: 30px;
 }
 
+p{
+    margin: 0%;
+}
+
 img {
     width: 100%;
     height: auto;
@@ -39,17 +43,52 @@ button {
  /* comienza Menú del cabezal*/
 
 .cabezal{
+    padding: 0px;
     background-color: rgb(163, 154, 146);
+    height: 100px;
 }
 
 .cabezal ul {
-    list-style: none;
     width: 100%;
-    height: 80px;
-    display: flex;
-    align-items: center;
+    height: 30px;
 }
 
+.cabezalMobile img{
+    margin: 0px;
+    padding: 0px;   
+}
+
+.cabezalMobile{
+    display: grid;
+    justify-content:left;
+    position: absolute;
+}
+
+.iconDropdown .btn-check:active+.btn, .btn-check:checked+.btn, .btn.active, .btn.show, .btn:active{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.btn-secondary{
+    --bs-btn-hover-bg: transparent
+}
+
+.dropdown-item{
+    background-color: rgb(72, 61, 63);
+    color: rgb(244, 235, 217);
+    width: 30%;
+}
+
+.dropdown-menu{
+    padding: 0px;
+    width: 100px;
+    --bs-dropdown-min-width: 500px;
+    --bs-dropdown-bg: transparent;
+}
+
+.nav{
+    --bs-nav-link-color: rgb(72, 61, 63);
+}
  /* termina Menú del cabezal*/
 
   /* comienza footer*/
@@ -60,7 +99,7 @@ footer{
     background-color: rgb(163, 154, 146);
     color: rgb(72, 61, 63);
     text-align: center;
-    vertical-align: middle;
+    justify-content: center;
 }
 .enlacepag {
     margin-top: 30px;
@@ -77,13 +116,12 @@ footer{
 
 .enlacemedia{
     display: grid;
-    grid-template-columns: 20% 20% 20% 20%;  
+    grid-template-columns: 20% 20% 20% 20%;
+    justify-content: center;
 }
 
 .enlacemedia img{
-    margin-left: 25px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin: 10px;
 }
 
 /*termina footer*/
@@ -91,6 +129,7 @@ footer{
 /* comienza Inicio*/
  
  .busqueda {
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,7 +137,24 @@ footer{
     width: 100%;
     background-color: hwb(349 24% 72%);
     color: rgb(163, 154, 146);
-    height: 30px;
+    height: 40px;
+}
+.row {
+    margin: 0px;
+}
+
+.textoIndex{
+    background-color: rgb(72, 61, 63);
+    font-weight: 200;
+    color: rgb(244, 235, 217);
+    height: 60px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.galeria img{
+   padding-top: 10px;
+   padding-bottom: 10px;
 }
 
 /* termina Inicio*/
@@ -174,6 +230,88 @@ footer{
 
 /*termina Tu Diseño*/
 
+/*comienza Boutique*/
+
+.galeriaVista{
+    display: grid;
+    justify-content: center;
+}
+
+.sale{
+    animation-duration: 1.5s;
+    animation-name: cartel;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cartel {
+    0% {
+    }
+    50%{
+        letter-spacing: 10px;
+        background-color: rgb(5, 142, 217);
+        color: rgb(244, 235, 217);
+    }
+    100%{
+        letter-spacing: 2px;
+    }
+}
+
+/*termina Boutique*/
+
+/*comienza Contacto*/
+.formulario{
+    margin-left: 40px;
+    padding: 3px;
+}
+.formulario form{
+    display: grid;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+.cuerpoForm{
+    border-radius: 10px;
+    background-color: rgb(120, 105, 94);
+    height: 650px;
+    margin: 15px;
+    padding-top: 15px;
+
+}
+
+textarea {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+}
+
+.botones input{
+    background-color: rgb(72, 61, 63);
+    border: 0.5px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.botones {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.horarios {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.horarios p{
+    padding-bottom: 10px;
+}
+
+
+/*termina contacto*/
 
 @media only screen and (min-width: 1024px){
 
@@ -199,11 +337,27 @@ footer{
         font-size: 20px;
         padding-left: 10px;
     }
+    .visible{
+        visibility: hidden !important;
+    }
+
+    .invisible{
+        visibility: visible !important;
+    }
+
+    .container-fluid{
+        --bs-gutter-x:0
+    }
 
     /* comienza Menú del cabezal*/
 
+    .cabezalMobile{
+        display: none;
+    }
+
     .cabezal{
         background-color: rgb(163, 154, 146);
+        height: 80px;
     }
 
     .cabezal ul {
@@ -219,7 +373,8 @@ footer{
         border: none;
         width: 16%;
         position:relative;
-        font-size: 20px;
+        font-size: 18px;
+        font-weight: bold;
         background-color: rgb(163, 154, 146);
         text-align: center;
         overflow: hidden;
@@ -232,8 +387,8 @@ footer{
     }
 
     .cabezal :hover{
-        font-size: 25px;
-        font-weight: bold;
+        font-size: 20px;
+        font-weight: bolder;
     }
 
     /*termina Menú del cabezal*/
@@ -281,7 +436,7 @@ footer{
         width: 100%;
         background-color: rgb(72, 61, 63);
         color: rgb(163, 154, 146);
-        height: 30px;
+        height: 34px;
     }
 
     .contenedorRotador{
@@ -290,11 +445,19 @@ footer{
         justify-content: center;
     }
     
+    .secciones article {
+        padding-right: 20px;
+    }
     .contenedorGaleria{
         display: flex;
         width: 100%;
         text-align: center;
         justify-content: center;
+    }
+
+    .carousel-inner div img{
+        width: 1300px;
+        height: auto;
     }
 
     .galeria{
@@ -317,6 +480,7 @@ footer{
         padding-bottom: 30px;
         font-size: 30px;
         font-weight: bold;
+        height: 100px;
     }
 
     /*termina Inicio*/
@@ -406,71 +570,24 @@ footer{
 
     /*comienza Boutique*/
 
-    .compras{
-        display: grid;
-        grid-template-columns: 50% 50%;
-       
-    }
-
-    .compras div{
-        display: grid;
-        grid-template-columns: 300px 100px 100px;
-        width: 500px;
-        height: 400px;
-        place-content: center;
-        background-color: rgb(163, 154, 146);
-        padding: 0%;
-        margin-left: 0%;
-        margin-right: 0%;
-        margin-bottom: 20px;
-    }
-
     .compras div img{
         width: 240px;
         height: 360px;
         padding: 0px;
     }
 
-    .compras div ul{
-        list-style: none;
-        padding-top: 40px;
-        font-size: 20px;
-        height: 30px;
-        margin: 5px;
-    }
 
-    .compras div ul li button{
-        background-color: rgb(72, 61, 63);
-        border: 0.5px;
-        color: rgb(255, 255, 255);
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 10px;
-        padding: 10px;
-        height: 30px;
-    }
-
-    .compras div ul li select{
-        background-color: rgb(72, 61, 63);
-        border: 0.5px;
-        color: rgb(255, 255, 255);
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 10px;
-        padding: 10px;
-        height: 30px;
-    }
-    .galeriaVista{
-        display: grid;
-        place-content: center;
-    }
     .tituloGaleria{
         display: grid;
         grid-template-columns: 33.3% 33.3% 33.4%;
         justify-content: center;
     }
+
+    .galeriaVista{
+        display: flex;
+        justify-content: center;
+    }
+
     .sale{
         animation-duration: 1.5s;
         animation-name: cartel;
@@ -488,41 +605,59 @@ footer{
             letter-spacing: 2px;
         }
     }
+
+    .card {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .cardGrilla{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .btn{
+        --bs-btn-bg: rgb(5, 142, 217); 
+    }
+
+    .list-group-item select{
+        background-color: rgb(244, 235, 217);
+    }
+
     /*termina Boutique*/
 
     /*comienza Contacto*/
 
-    .formulario{
-        display: grid;
-
-        place-content: center;
+    main{
+        justify-items: center;
     }
 
-    .formulario form{
+    .formulario form, .horarios, .notificaciones{
         display: grid;
-        place-content: center;
-        width: 1000px;
-        height: 800px;
-        background-color: rgb(120, 105, 94);
-        padding: 30px;
-        margin-left: 0%;
-        margin-right: 0%;
-        margin-bottom: 20px;
-        margin-top: 20px;
         color: rgb(255, 255, 255);
-        font-size: 20px;
+        font-size: 15px;
+    }
+    .cuerpoForm{
+        border-radius: 10px;
+        background-color: rgb(120, 105, 94);
+        height: 800px;
+        margin: 15px;
+        display: grid;
+        justify-content: center;
+    }
+
+    .datos label input{
+        width: 300px;
+    }
+
+    .datos label{
+        width: 300px;
     }
 
     textarea {
         width: 600px;
         height: 200px;
         text-align: center;
-    }
-    .datos{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 50% 50%;
-        margin-top: 100px;
     }
 
     .botones input{
@@ -534,26 +669,28 @@ footer{
         display: inline-block;
         font-size: 20px;
         padding: 10px;
-        margin-top: 100px;
     }
 
     .botones {
         margin-left: 500px;
     }
 
-    .horarios {
-        margin-top: 30px;
-        margin-bottom: 30px;
+    .horarios, .notificaciones {
+        margin: 30px;
     }
 
-    .datosDos{
-        margin-top: 30px;
-        margin-bottom: 30px;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 50% 50%;
-
+    .notificaciones{
+        display: inline;
     }
+
+    .notificaciones input{
+        margin-left: 20px;
+    }
+
+    .comerntarios{
+        display: inline;
+    }
+    
 
     /*termina Contacto*/
 }
