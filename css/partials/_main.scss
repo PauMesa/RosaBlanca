@@ -3,38 +3,28 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
-
+    --bs-gutter-x: 0;
     a {
         text-decoration-line: none;
         color: $colorFondoSecundario;
     }
-
     .busqueda {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 18px;
+        font-size: map-get($estilos, tamanoBusqueda);
         width: 100%;
         background-color: $colorPrimario;
         color: $colorFondoPrimario;
         height: 40px;
-        --bs-gutter-x: 0;
         font-weight: normal;
     }
-
-    @media only screen and (min-width: 1024px) {
-        --bs-gutter-x: 0;
-    }
-
     /*comienza página de inicio*/
     .mainInicio {
-        --bs-gutter-x: 0;
-
         section {
             article {
                 width: auto;
             }
-
             p {
                 background-color: $colorSecundario;
                 color: $colorFondoPrimario;
@@ -44,15 +34,12 @@ body {
                 margin-top: 20px;
                 margin-bottom: 20px;
             }
-
             aside {
                 width: auto;
                 display: grid;
                 justify-content: center;
-
                 div {
                     width: auto;
-
                     img {
                         width: auto;
                         padding: 10px;
@@ -61,11 +48,8 @@ body {
             }
         }
     }
-
     @media only screen and (min-width: 1024px) {
         .mainInicio {
-            --bs-gutter-x: 0;
-
             section {
                 article {
                     padding-top: 20px;
@@ -75,7 +59,6 @@ body {
                     width: 100%;
                     text-align: center;
                     justify-content: center;
-
                     div {
                         div {
                             img {
@@ -85,7 +68,6 @@ body {
                         }
                     }
                 }
-
                 .textoIndex {
                     text-align: center;
                     background-color: $colorSecundario;
@@ -93,10 +75,9 @@ body {
                     color: $colorFondoPrimario;
                     padding-top: 30px;
                     padding-bottom: 30px;
-                    font-size: 30px;
+                    font-size: map-get($estilos, tamanoSubt);
                     height: 120px;
                 }
-
                 aside {
                     display: flex;
                     justify-content: center;
@@ -115,22 +96,19 @@ body {
             }
         }
     }
-
     /*termina Inicio*/
     /*comienza Sobre Nosotros*/
     .mainAbUs {
-        .seccionAbUs {
-            h2 {
-                width: auto;
-                font-weight: bold;
-            }
+        width: auto;
+        .seccionAbUs{
+            width: auto;
             article {
                 display: flex;
                 width: auto;
                 justify-content: center;
-                margin-bottom: 20px;
                 div {
                     background-color: $colorSecundario;
+                    margin-bottom: 10px;
                     img {
                         width: 100%;
                         height: auto;
@@ -143,17 +121,16 @@ body {
                     margin-left: 0%;
                     margin-right: 0%;
                     font-weight: bold;
-                    padding: 15px;
                 }
                 p {
                     color: $colorFondoPrimario;
                     font-weight: normal;
                     padding: 20px;
+                    font-size: map-get($estilos, tamanoTexto);
                 }
             }
         }
     }
-
     @media only screen and (min-width: 1024px) {
         .mainAbUs {
             section {
@@ -161,13 +138,11 @@ body {
                 width: 100%;
                 text-align: center;
                 justify-content: center;
-
                 #tituloAbUs {
                     animation-duration: 3s;
                     animation-name: tituloAnimado;
                     animation-iteration-count: infinite;
                 }
-
                 @keyframes tituloAnimado {
                     0% {}
 
@@ -179,47 +154,45 @@ body {
                         letter-spacing: 2px;
                     }
                 }
-
                 article {
-                    display: flex;
-                    width: 100%;
+                    display: grid;
                     text-align: center;
                     justify-content: center;
-
+                    margin-bottom: 30px;
                     div {
                         display: grid;
+                        width: 80%;
                         grid-template-columns: 50% 50%;
                         grid-template-rows: 50% 50%;
-
                         img {
+                            width: 600px;
+                            height: 400px;
+                            margin: 0%;
+                            background-color: $colorSecundario;
+                            padding: 10px;
+                        }
+                        a {
                             padding: 20px;
                             width: 600px;
                             height: 400px;
                             margin: 0%;
                             background-color: $colorSecundario;
                         }
-
-                        a {
-                            padding: 20px;
-                            width: 600px;
-                            height: 400px;
-                            margin: 0%;
-                            font-size: 30px;
-                            background-color: $colorSecundario;
-                            }
+                        p{
+                            font-size: map-get($estilos, tamanoTextob);
                         }
                     }
                 }
             }
         }
     }
-
+    
     /*termina Sobre Nosotros*/
     /*comiente Tu Diseño*/
     .mainTuDiseño {
         article {
             p {
-                font-size: 20px;
+                font-size: map-get($estilos, tamanoTextob);
                 background-color: $colorPrimario;
                 display: grid;
                 place-content: center;
@@ -229,26 +202,22 @@ body {
                 font-weight: normal;
                 height: 100%;
             }
-
             img {
                 width: 100%;
                 margin: 0%;
             }
         }
-
         section {
             article {
                 display: block;
-
                 ul {
-                    font-size: 15px;
+                    font-size: map-get($estilos, tamanoTexto);
                     font-weight: bold;
                     width: 100%;
                     display: grid;
                     place-content: center;
                     padding-top: 30px;
                     padding-bottom: 40px;
-
                     li {
                         padding-top: 2px;
                         padding-bottom: 2px;
@@ -259,19 +228,16 @@ body {
                 }
             }
         }
-
         @media only screen and (min-width: 1024px) {
             article {
                 display: grid;
                 grid-template-columns: 50% 50%;
-
                 img {
                     width: 100%;
                 }
-
                 p {
                     text-align: center;
-                    font-size: 30px;
+                    font-size: map-get($estilos, tamanoSubt);
                     background-color: $colorPrimario;
                     display: grid;
                     place-content: center;
@@ -279,18 +245,16 @@ body {
                     font-weight: 100;
                 }
             }
-
             section {
                 article {
                     ul {
                         list-style-type: circle;
-                        font-size: 20px;
+                        font-size: map-get($estilos, tamanoTextob);
                         width: 100%;
                         display: grid;
                         place-content: center;
                         padding-top: 60px;
                         padding-bottom: 80px;
-
                         li {
                             padding-top: 2px;
                             padding-bottom: 2px;
@@ -302,28 +266,16 @@ body {
             }
         }
     }
-
     /*termina Tu Diseño*/
     /*comienza Boutique*/
     .mainBoutique {
-        .btn {
-            --bs-btn-bg: #ffbd00;
-            border-color: $colorBotonB;
-            --bs-btn-hover-bg: #FF5400;
-            --bs-btn-hover-border-color: #FF5400;
-            --bs-list-group-active-bg: #ffbd00;
-            --bs-list-group-active-border-color: #ffbd00;
-        }
-
         .list-group-item select {
             background-color: rgb(244, 235, 217);
         }
-
         .list-group {
             --bs-list-group-active-bg: #ffbd00;
             --bs-list-group-active-border-color: #ffbd00;
         }
-
         .galeriaTitulo {
             .tituloGaleria {
                 .sale {
@@ -331,7 +283,6 @@ body {
                     animation-name: cartel;
                     animation-iteration-count: infinite;
                 }
-
                 @keyframes cartel {
                     0% {}
 
@@ -342,12 +293,10 @@ body {
 
                     100% {}
                 }
-
                 .saleCentral {
                     animation-duration: 1.5s;
                     animation-name: cartelCentral;
                     animation-iteration-count: infinite;
-
                     @keyframes cartelCentral {
                         0% {}
 
@@ -362,7 +311,6 @@ body {
                 }
             }
         }
-
         .galeriaVista {
             display: grid;
             justify-content: center;
@@ -372,21 +320,18 @@ body {
                 justify-content: center;
             }
         }
-
         @media only screen and (min-width: 1024px) {
             .galeriaTitulo {
                 .tituloGaleria {
                     display: grid;
                     grid-template-columns: 33.3% 33.3% 33.4%;
                     justify-content: center;
-
                     .sale {
                         color: $colorBotonA;
                         animation-duration: 1.5s;
                         animation-name: cartel;
                         animation-iteration-count: infinite;
                     }
-
                     @keyframes cartel {
                         0% {}
 
@@ -400,13 +345,11 @@ body {
                             letter-spacing: 2px;
                         }
                     }
-
                     .saleCentral {
                         animation-duration: 1.5s;
                         animation-name: cartelCentral;
                         animation-iteration-count: infinite;
                     }
-
                     @keyframes cartelCentral {
                         0% {}
 
@@ -418,25 +361,21 @@ body {
                     }
                 }
             }
-
             .galeriaVista {
                 display: flex;
                 justify-content: center;
                 border-color: $colorBotonA;
                 border: 1px;
-
                 .compras {
                     .card {
                         margin-top: 10px;
                         width: 100%;
                     }
-
                     div {
                         img {
                             width: 240px;
                             height: 360px;
                             padding: 0px;
-
                             div {
                                 .cardGrilla {
                                     display: grid;
@@ -449,11 +388,10 @@ body {
             }
         }
     }
-
     /*termina Boutique*/
     /*comienza Contacto*/
     .mainContacto {
-        font-size: 20px;
+        font-size: map-get($estilos, tamanoTextob);
         color: $colorSecundario;
         font-weight: bold;
         section {
@@ -491,37 +429,30 @@ body {
                     }
                 }
             }
-
             div {
                 p {
                     padding-bottom: 15px;
                     font-weight: bold;
                 }
             }
-
             .notificaciones {
                 padding-top: 20px;
                 padding-bottom: 20px;
                 padding-left: 20px;
             }
-
             .botones {
                 display: gridx;
                 justify-content: right;
-
             }
         }
-
         @media only screen and (min-width: 1024px) {
             position: relative;
-
             .cuerpoForm {
                 margin: auto;
                 margin-bottom: 20px;
                 width: 60%;
-                font-size: medium;
+                font-size: map-get($estilos, tamanoTextob);
                 font-weight: normal;
-
                 article {
                     form {
                         label {
@@ -535,7 +466,6 @@ body {
                                 margin-bottom: 16px;
                                 resize: vertical;
                             }
-
                             textarea {
                                 width: 100%;
                                 padding: 12px;
@@ -549,20 +479,17 @@ body {
                         }
                     }
                 }
-
                 div {
                     p {
                         padding-bottom: 15px;
                         font-weight: bold;
                     }
                 }
-
                 .notificaciones {
                     padding-top: 20px;
                     padding-bottom: 20px;
                     padding-left: 20px;
                 }
-
                 .botones {
                     display: flex;
                     justify-content: flex-end;
@@ -570,5 +497,5 @@ body {
             }
         }
     }
-
     /*termina Contacto*/
+}

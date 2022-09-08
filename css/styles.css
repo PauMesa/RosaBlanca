@@ -25,14 +25,16 @@ h2 {
 }
 
 .btn-secondary {
-  --bs-btn-hover-bg: transparent ;
+  --bs-btn-hover-bg: transparent;
 }
 
 .btn-search {
-  background-color: #fff;
+  background-color: #390099;
   color: #fff;
   font-size: 18px;
   padding-left: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .btnContacto {
@@ -43,20 +45,30 @@ h2 {
   margin: 20px;
 }
 
-.tituloAbUs {
-  color: #FF5400 #9E0059;
+.btn-primary {
+  --bs-btn-bg: #ffbd00;
+  border-color: #ffbd00;
+  --bs-btn-hover-bg: #FF5400;
+  --bs-btn-hover-border-color: #FF5400;
+  --bs-list-group-active-bg: #ffbd00;
+  --bs-list-group-active-border-color: #ffbd00;
+}
+
+/*Títulos*/
+.titulo-AbUs {
+  color: #9E0059;
 }
 
 .h2-Custom {
-  color: #FF5400 #390099;
+  color: #390099;
 }
 
 .saleCentral {
-  color: #FF5400 #FF5400;
+  color: #FF5400;
 }
 
 .h2-Contacto {
-  color: #FF5400 #390099;
+  color: #390099;
 }
 
 header {
@@ -136,9 +148,17 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Raleway", sans-serif;
+  --bs-gutter-x: 0;
   /*comienza página de inicio*/
   /*termina Inicio*/
   /*comienza Sobre Nosotros*/
+  /*termina Sobre Nosotros*/
+  /*comiente Tu Diseño*/
+  /*termina Tu Diseño*/
+  /*comienza Boutique*/
+  /*termina Boutique*/
+  /*comienza Contacto*/
+  /*termina Contacto*/
 }
 body a {
   -webkit-text-decoration-line: none;
@@ -154,16 +174,7 @@ body .busqueda {
   background-color: #390099;
   color: #fff;
   height: 40px;
-  --bs-gutter-x: 0;
   font-weight: normal;
-}
-@media only screen and (min-width: 1024px) {
-  body {
-    --bs-gutter-x: 0;
-  }
-}
-body .mainInicio {
-  --bs-gutter-x: 0;
 }
 body .mainInicio section article {
   width: auto;
@@ -190,9 +201,6 @@ body .mainInicio section aside div img {
   padding: 10px;
 }
 @media only screen and (min-width: 1024px) {
-  body .mainInicio {
-    --bs-gutter-x: 0;
-  }
   body .mainInicio section article {
     padding-top: 20px;
     padding-left: 150px;
@@ -230,18 +238,20 @@ body .mainInicio section aside div img {
     padding: 20px;
   }
 }
-body .mainAbUs .seccionAbUs h2 {
+body .mainAbUs {
   width: auto;
-  font-weight: bold;
+}
+body .mainAbUs .seccionAbUs {
+  width: auto;
 }
 body .mainAbUs .seccionAbUs article {
   display: flex;
   width: auto;
   justify-content: center;
-  margin-bottom: 20px;
 }
 body .mainAbUs .seccionAbUs article div {
   background-color: #9E0059;
+  margin-bottom: 10px;
 }
 body .mainAbUs .seccionAbUs article div img {
   width: 100%;
@@ -254,12 +264,12 @@ body .mainAbUs .seccionAbUs article a {
   margin-left: 0%;
   margin-right: 0%;
   font-weight: bold;
-  padding: 15px;
 }
 body .mainAbUs .seccionAbUs article p {
   color: #fff;
   font-weight: normal;
   padding: 20px;
+  font-size: 15px;
 }
 @media only screen and (min-width: 1024px) {
   body .mainAbUs section {
@@ -293,36 +303,36 @@ body .mainAbUs .seccionAbUs article p {
     }
   }
   body .mainAbUs section article {
-    display: flex;
-    width: 100%;
+    display: grid;
     text-align: center;
     justify-content: center;
+    margin-bottom: 30px;
   }
   body .mainAbUs section article div {
     display: grid;
+    width: 80%;
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
   }
   body .mainAbUs section article div img {
-    padding: 20px;
     width: 600px;
     height: 400px;
     margin: 0%;
     background-color: #9E0059;
+    padding: 10px;
   }
   body .mainAbUs section article div a {
     padding: 20px;
     width: 600px;
     height: 400px;
     margin: 0%;
-    font-size: 30px;
     background-color: #9E0059;
   }
+  body .mainAbUs section article div p {
+    font-size: 20px;
+  }
 }
-
-/*termina Sobre Nosotros*/
-/*comiente Tu Diseño*/
-.mainTuDiseño article p {
+body .mainTuDiseño article p {
   font-size: 20px;
   background-color: #390099;
   display: grid;
@@ -333,14 +343,14 @@ body .mainAbUs .seccionAbUs article p {
   font-weight: normal;
   height: 100%;
 }
-.mainTuDiseño article img {
+body .mainTuDiseño article img {
   width: 100%;
   margin: 0%;
 }
-.mainTuDiseño section article {
+body .mainTuDiseño section article {
   display: block;
 }
-.mainTuDiseño section article ul {
+body .mainTuDiseño section article ul {
   font-size: 15px;
   font-weight: bold;
   width: 100%;
@@ -349,7 +359,7 @@ body .mainAbUs .seccionAbUs article p {
   padding-top: 30px;
   padding-bottom: 40px;
 }
-.mainTuDiseño section article ul li {
+body .mainTuDiseño section article ul li {
   padding-top: 2px;
   padding-bottom: 2px;
   padding-left: 10px;
@@ -357,14 +367,14 @@ body .mainAbUs .seccionAbUs article p {
   text-align: start;
 }
 @media only screen and (min-width: 1024px) {
-  .mainTuDiseño article {
+  body .mainTuDiseño article {
     display: grid;
     grid-template-columns: 50% 50%;
   }
-  .mainTuDiseño article img {
+  body .mainTuDiseño article img {
     width: 100%;
   }
-  .mainTuDiseño article p {
+  body .mainTuDiseño article p {
     text-align: center;
     font-size: 30px;
     background-color: #390099;
@@ -373,7 +383,7 @@ body .mainAbUs .seccionAbUs article p {
     color: #fff;
     font-weight: 100;
   }
-  .mainTuDiseño section article ul {
+  body .mainTuDiseño section article ul {
     list-style-type: circle;
     font-size: 20px;
     width: 100%;
@@ -382,32 +392,21 @@ body .mainAbUs .seccionAbUs article p {
     padding-top: 60px;
     padding-bottom: 80px;
   }
-  .mainTuDiseño section article ul li {
+  body .mainTuDiseño section article ul li {
     padding-top: 2px;
     padding-bottom: 2px;
     font-weight: bold;
     color: #390099;
   }
 }
-
-/*termina Tu Diseño*/
-/*comienza Boutique*/
-.mainBoutique .btn {
-  --bs-btn-bg: #ffbd00;
-  border-color: #ffbd00;
-  --bs-btn-hover-bg: #FF5400;
-  --bs-btn-hover-border-color: #FF5400;
-  --bs-list-group-active-bg: #ffbd00;
-  --bs-list-group-active-border-color: #ffbd00;
-}
-.mainBoutique .list-group-item select {
+body .mainBoutique .list-group-item select {
   background-color: rgb(244, 235, 217);
 }
-.mainBoutique .list-group {
+body .mainBoutique .list-group {
   --bs-list-group-active-bg: #ffbd00;
   --bs-list-group-active-border-color: #ffbd00;
 }
-.mainBoutique .galeriaTitulo .tituloGaleria .sale {
+body .mainBoutique .galeriaTitulo .tituloGaleria .sale {
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
   -webkit-animation-name: cartel;
@@ -427,7 +426,7 @@ body .mainAbUs .seccionAbUs article p {
     color: rgb(244, 235, 217);
   }
 }
-.mainBoutique .galeriaTitulo .tituloGaleria .saleCentral {
+body .mainBoutique .galeriaTitulo .tituloGaleria .saleCentral {
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
   -webkit-animation-name: cartelCentral;
@@ -451,21 +450,21 @@ body .mainAbUs .seccionAbUs article p {
     letter-spacing: 2px;
   }
 }
-.mainBoutique .galeriaVista {
+body .mainBoutique .galeriaVista {
   display: grid;
   justify-content: center;
 }
-.mainBoutique .galeriaVista .card {
+body .mainBoutique .galeriaVista .card {
   display: grid;
   justify-content: center;
 }
 @media only screen and (min-width: 1024px) {
-  .mainBoutique .galeriaTitulo .tituloGaleria {
+  body .mainBoutique .galeriaTitulo .tituloGaleria {
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.4%;
     justify-content: center;
   }
-  .mainBoutique .galeriaTitulo .tituloGaleria .sale {
+  body .mainBoutique .galeriaTitulo .tituloGaleria .sale {
     color: #FF5400;
     -webkit-animation-duration: 1.5s;
             animation-duration: 1.5s;
@@ -494,7 +493,7 @@ body .mainAbUs .seccionAbUs article p {
       letter-spacing: 2px;
     }
   }
-  .mainBoutique .galeriaTitulo .tituloGaleria .saleCentral {
+  body .mainBoutique .galeriaTitulo .tituloGaleria .saleCentral {
     -webkit-animation-duration: 1.5s;
             animation-duration: 1.5s;
     -webkit-animation-name: cartelCentral;
@@ -512,35 +511,32 @@ body .mainAbUs .seccionAbUs article p {
       color: #ffbd00;
     }
   }
-  .mainBoutique .galeriaVista {
+  body .mainBoutique .galeriaVista {
     display: flex;
     justify-content: center;
     border-color: #FF5400;
     border: 1px;
   }
-  .mainBoutique .galeriaVista .compras .card {
+  body .mainBoutique .galeriaVista .compras .card {
     margin-top: 10px;
     width: 100%;
   }
-  .mainBoutique .galeriaVista .compras div img {
+  body .mainBoutique .galeriaVista .compras div img {
     width: 240px;
     height: 360px;
     padding: 0px;
   }
-  .mainBoutique .galeriaVista .compras div img div .cardGrilla {
+  body .mainBoutique .galeriaVista .compras div img div .cardGrilla {
     display: grid;
     grid-template-columns: 50% 50%;
   }
 }
-
-/*termina Boutique*/
-/*comienza Contacto*/
-.mainContacto {
+body .mainContacto {
   font-size: 20px;
   color: #9E0059;
   font-weight: bold;
 }
-.mainContacto section {
+body .mainContacto section {
   padding: 12px;
   border: 1px solid #390099;
   border-radius: 4px;
@@ -549,7 +545,7 @@ body .mainAbUs .seccionAbUs article p {
   background-color: #390099;
   color: #fff;
 }
-.mainContacto section article form label input {
+body .mainContacto section article form label input {
   width: 100%;
   padding: 12px;
   border: 1px solid #390099;
@@ -559,7 +555,7 @@ body .mainAbUs .seccionAbUs article p {
   margin-bottom: 16px;
   resize: vertical;
 }
-.mainContacto section article form label textarea {
+body .mainContacto section article form label textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #390099;
@@ -569,31 +565,31 @@ body .mainAbUs .seccionAbUs article p {
   margin-bottom: 16px;
   resize: vertical;
 }
-.mainContacto section div p {
+body .mainContacto section div p {
   padding-bottom: 15px;
   font-weight: bold;
 }
-.mainContacto section .notificaciones {
+body .mainContacto section .notificaciones {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 20px;
 }
-.mainContacto section .botones {
+body .mainContacto section .botones {
   display: gridx;
   justify-content: right;
 }
 @media only screen and (min-width: 1024px) {
-  .mainContacto {
+  body .mainContacto {
     position: relative;
   }
-  .mainContacto .cuerpoForm {
+  body .mainContacto .cuerpoForm {
     margin: auto;
     margin-bottom: 20px;
     width: 60%;
-    font-size: medium;
+    font-size: 20px;
     font-weight: normal;
   }
-  .mainContacto .cuerpoForm article form label input {
+  body .mainContacto .cuerpoForm article form label input {
     width: 100%;
     padding: 12px;
     border: 1px solid #390099;
@@ -603,7 +599,7 @@ body .mainAbUs .seccionAbUs article p {
     margin-bottom: 16px;
     resize: vertical;
   }
-  .mainContacto .cuerpoForm article form label textarea {
+  body .mainContacto .cuerpoForm article form label textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #390099;
@@ -613,22 +609,21 @@ body .mainAbUs .seccionAbUs article p {
     margin-bottom: 16px;
     resize: vertical;
   }
-  .mainContacto .cuerpoForm div p {
+  body .mainContacto .cuerpoForm div p {
     padding-bottom: 15px;
     font-weight: bold;
   }
-  .mainContacto .cuerpoForm .notificaciones {
+  body .mainContacto .cuerpoForm .notificaciones {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 20px;
   }
-  .mainContacto .cuerpoForm .botones {
+  body .mainContacto .cuerpoForm .botones {
     display: flex;
     justify-content: flex-end;
   }
 }
 
-/*termina Contacto*/
 footer {
   display: grid;
   grid-template-rows: 50% 50%;

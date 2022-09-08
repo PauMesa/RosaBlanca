@@ -4,19 +4,18 @@
     border-color: transparent;
 }
 .btn-secondary{
-    --bs-btn-hover-bg: transparent
+    --bs-btn-hover-bg: transparent;
 }
 .btn{
-    @extend %botonBase
+    @extend %botonBase;
 }
 .btn-search{
-    background-color: $colorFondoPrimario;
+    background-color: $colorPrimario;
     color: $colorFondoPrimario;
     font-size: 18px;
     padding-left: 10px;
-}
-h2{
-    @extend %h2Base
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 .btnContacto {
     background-color: $colorBotonA;
@@ -25,16 +24,30 @@ h2{
     font-weight: bold;
     margin: 20px;
 }
+.btn-primary {
+    --bs-btn-bg: #ffbd00;
+    border-color: $colorBotonB;
+    --bs-btn-hover-bg: #FF5400;
+    --bs-btn-hover-border-color: #FF5400;
+    --bs-list-group-active-bg: #ffbd00;
+    --bs-list-group-active-border-color: #ffbd00;
+}
 
-.tituloAbUs{
-    @include h2mixin ($textColor: $colorSecundario)
+
+/*Títulos*/
+
+h2{
+    @extend %h2Base;
+}
+.titulo-AbUs{
+    @include h2mixin ($textColor: $colorSecundario);
 }
 .h2-Custom{
-    @include h2mixin ($textColor: $colorPrimario)
+    @include h2mixin ($textColor: $colorPrimario);
 }
 .saleCentral{
-    @include h2mixin ($textColor: $colorBotonA)
+    @include h2mixin ($textColor: $colorBotonA);
 }
 .h2-Contacto {
-    @include h2mixin ($textColor: $colorPrimario)
+    @include h2mixin ($textColor: $colorPrimario);
 }
