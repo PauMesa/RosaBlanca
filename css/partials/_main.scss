@@ -1,87 +1,574 @@
-/*comienza página de inicio*/
-.mainInicio{
-    --bs-gutter-x: none;
-    nav{
-        font-weight: bold;
+/*estilos generales*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+
+    a {
+        text-decoration-line: none;
+        color: $colorFondoSecundario;
+    }
+
+    .busqueda {
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 18px;
         width: 100%;
-        background-color: hwb(349 24% 72%);
-        color: rgb(163, 154, 146);
+        background-color: $colorPrimario;
+        color: $colorFondoPrimario;
         height: 40px;
-    }
-    p{
-        background-color: rgb(72, 61, 63);
-        font-weight: 200;
-        color: rgb(244, 235, 217);
-        height: 60px;
-        text-align: center;
-        padding-top: 15px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        --bs-gutter-x: 0;
+        font-weight: normal;
     }
 
-}
+    @media only screen and (min-width: 1024px) {
+        --bs-gutter-x: 0;
+    }
 
+    /*comienza página de inicio*/
+    .mainInicio {
+        --bs-gutter-x: 0;
 
-@media only screen and (min-width: 1024px){
-    main{
-        nav{
-            display: inline-block;
-            text-align: center;
-            font-size: 20px;
-            width: 100%;
-            background-color: rgb(72, 61, 63);
-            color: rgb(163, 154, 146);
-            height: 34px;
-        }
-        section{
-            article{
-                display: flex;
-                width: 100%;
+        section {
+            article {
+                width: auto;
+            }
+
+            p {
+                background-color: $colorSecundario;
+                color: $colorFondoPrimario;
+                height: 60px;
                 text-align: center;
-                justify-content: center;
-                padding-left: 40px;
-                padding-right: 40px;
-                padding-top: 20px;
+                padding-top: 15px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
 
-                div{
-                    div{
-                        img{
-                            width: 800px;
-                            height: auto;
+            aside {
+                width: auto;
+                display: grid;
+                justify-content: center;
+
+                div {
+                    width: auto;
+
+                    img {
+                        width: auto;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 1024px) {
+        .mainInicio {
+            --bs-gutter-x: 0;
+
+            section {
+                article {
+                    padding-top: 20px;
+                    padding-left: 150px;
+                    padding-right: 150px;
+                    display: flex;
+                    width: 100%;
+                    text-align: center;
+                    justify-content: center;
+
+                    div {
+                        div {
+                            img {
+                                width: 800px;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+
+                .textoIndex {
+                    text-align: center;
+                    background-color: $colorSecundario;
+                    width: 100%;
+                    color: $colorFondoPrimario;
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                    font-size: 30px;
+                    height: 120px;
+                }
+
+                aside {
+                    display: flex;
+                    justify-content: center;
+
+                    div {
+                        display: grid;
+                        grid-template-columns: 50% 50%;
+                        grid-template-rows: 50% 50%;
+                        margin: 20px;
+
+                        img {
+                            padding: 20px;
                         }
                     }
                 }
             }
-            p{
-                text-align: center;
-                background-color: rgb(120, 105, 94);
-                width: 100%;
-                color: rgb(163, 154, 146);
-                padding-top: 30px;
-                padding-bottom: 30px;
-                font-size: 30px;
+        }
+    }
+
+    /*termina Inicio*/
+    /*comienza Sobre Nosotros*/
+    .mainAbUs {
+        .seccionAbUs {
+            h2 {
+                width: auto;
                 font-weight: bold;
-                height: 100px;
             }
-            aside{
+            article {
                 display: flex;
+                width: auto;
                 justify-content: center;
-                div{
-                    display: grid;
-                    grid-template-columns: 50% 50%;
-                    grid-template-rows: 50% 50%;
-                    margin: 20px;
-                    img{
-                        padding: 20px;
+                margin-bottom: 20px;
+                div {
+                    background-color: $colorSecundario;
+                    img {
+                        width: 100%;
+                        height: auto;
+                        margin: 0px;
+                    }
+                }
+                a {
+                    width: 100%;
+                    height: auto;
+                    margin-left: 0%;
+                    margin-right: 0%;
+                    font-weight: bold;
+                    padding: 15px;
+                }
+                p {
+                    color: $colorFondoPrimario;
+                    font-weight: normal;
+                    padding: 20px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 1024px) {
+        .mainAbUs {
+            section {
+                display: flex;
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+
+                #tituloAbUs {
+                    animation-duration: 3s;
+                    animation-name: tituloAnimado;
+                    animation-iteration-count: infinite;
+                }
+
+                @keyframes tituloAnimado {
+                    0% {}
+
+                    50% {
+                        letter-spacing: 10px;
+                    }
+
+                    100% {
+                        letter-spacing: 2px;
+                    }
+                }
+
+                article {
+                    display: flex;
+                    width: 100%;
+                    text-align: center;
+                    justify-content: center;
+
+                    div {
+                        display: grid;
+                        grid-template-columns: 50% 50%;
+                        grid-template-rows: 50% 50%;
+
+                        img {
+                            padding: 20px;
+                            width: 600px;
+                            height: 400px;
+                            margin: 0%;
+                            background-color: $colorSecundario;
+                        }
+
+                        a {
+                            padding: 20px;
+                            width: 600px;
+                            height: 400px;
+                            margin: 0%;
+                            font-size: 30px;
+                            background-color: $colorSecundario;
+                            }
+                        }
                     }
                 }
             }
         }
     }
-/*termina Inicio*/
 
-}
+    /*termina Sobre Nosotros*/
+    /*comiente Tu Diseño*/
+    .mainTuDiseño {
+        article {
+            p {
+                font-size: 20px;
+                background-color: $colorPrimario;
+                display: grid;
+                place-content: center;
+                padding: 10px;
+                margin: 0%;
+                color: $colorFondoPrimario;
+                font-weight: normal;
+                height: 100%;
+            }
+
+            img {
+                width: 100%;
+                margin: 0%;
+            }
+        }
+
+        section {
+            article {
+                display: block;
+
+                ul {
+                    font-size: 15px;
+                    font-weight: bold;
+                    width: 100%;
+                    display: grid;
+                    place-content: center;
+                    padding-top: 30px;
+                    padding-bottom: 40px;
+
+                    li {
+                        padding-top: 2px;
+                        padding-bottom: 2px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        text-align: start;
+                    }
+                }
+            }
+        }
+
+        @media only screen and (min-width: 1024px) {
+            article {
+                display: grid;
+                grid-template-columns: 50% 50%;
+
+                img {
+                    width: 100%;
+                }
+
+                p {
+                    text-align: center;
+                    font-size: 30px;
+                    background-color: $colorPrimario;
+                    display: grid;
+                    place-content: center;
+                    color: $colorFondoPrimario;
+                    font-weight: 100;
+                }
+            }
+
+            section {
+                article {
+                    ul {
+                        list-style-type: circle;
+                        font-size: 20px;
+                        width: 100%;
+                        display: grid;
+                        place-content: center;
+                        padding-top: 60px;
+                        padding-bottom: 80px;
+
+                        li {
+                            padding-top: 2px;
+                            padding-bottom: 2px;
+                            font-weight: bold;
+                            color: $colorPrimario;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*termina Tu Diseño*/
+    /*comienza Boutique*/
+    .mainBoutique {
+        .btn {
+            --bs-btn-bg: #ffbd00;
+            border-color: $colorBotonB;
+            --bs-btn-hover-bg: #FF5400;
+            --bs-btn-hover-border-color: #FF5400;
+            --bs-list-group-active-bg: #ffbd00;
+            --bs-list-group-active-border-color: #ffbd00;
+        }
+
+        .list-group-item select {
+            background-color: rgb(244, 235, 217);
+        }
+
+        .list-group {
+            --bs-list-group-active-bg: #ffbd00;
+            --bs-list-group-active-border-color: #ffbd00;
+        }
+
+        .galeriaTitulo {
+            .tituloGaleria {
+                .sale {
+                    animation-duration: 1.5s;
+                    animation-name: cartel;
+                    animation-iteration-count: infinite;
+                }
+
+                @keyframes cartel {
+                    0% {}
+
+                    50% {
+                        background-color: $colorBotonA;
+                        color: rgb(244, 235, 217);
+                    }
+
+                    100% {}
+                }
+
+                .saleCentral {
+                    animation-duration: 1.5s;
+                    animation-name: cartelCentral;
+                    animation-iteration-count: infinite;
+
+                    @keyframes cartelCentral {
+                        0% {}
+
+                        50% {
+                            letter-spacing: 10px;
+                        }
+
+                        100% {
+                            letter-spacing: 2px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .galeriaVista {
+            display: grid;
+            justify-content: center;
+
+            .card {
+                display: grid;
+                justify-content: center;
+            }
+        }
+
+        @media only screen and (min-width: 1024px) {
+            .galeriaTitulo {
+                .tituloGaleria {
+                    display: grid;
+                    grid-template-columns: 33.3% 33.3% 33.4%;
+                    justify-content: center;
+
+                    .sale {
+                        color: $colorBotonA;
+                        animation-duration: 1.5s;
+                        animation-name: cartel;
+                        animation-iteration-count: infinite;
+                    }
+
+                    @keyframes cartel {
+                        0% {}
+
+                        50% {
+                            letter-spacing: 10px;
+                            background-color: $colorBotonA;
+                            color: rgb(244, 235, 217);
+                        }
+
+                        100% {
+                            letter-spacing: 2px;
+                        }
+                    }
+
+                    .saleCentral {
+                        animation-duration: 1.5s;
+                        animation-name: cartelCentral;
+                        animation-iteration-count: infinite;
+                    }
+
+                    @keyframes cartelCentral {
+                        0% {}
+
+                        50% {
+                            color: $colorBotonB;
+                        }
+
+                        100% {}
+                    }
+                }
+            }
+
+            .galeriaVista {
+                display: flex;
+                justify-content: center;
+                border-color: $colorBotonA;
+                border: 1px;
+
+                .compras {
+                    .card {
+                        margin-top: 10px;
+                        width: 100%;
+                    }
+
+                    div {
+                        img {
+                            width: 240px;
+                            height: 360px;
+                            padding: 0px;
+
+                            div {
+                                .cardGrilla {
+                                    display: grid;
+                                    grid-template-columns: 50% 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*termina Boutique*/
+    /*comienza Contacto*/
+    .mainContacto {
+        font-size: 20px;
+        color: $colorSecundario;
+        font-weight: bold;
+        section {
+            padding: 12px;
+            border: 1px solid $colorPrimario;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 6px;
+            background-color: $colorPrimario;
+            color: $colorFondoPrimario;
+            article {
+                form {
+                    label {
+                        input {
+                            width: 100%;
+                            padding: 12px;
+                            border: 1px solid $colorPrimario;
+                            border-radius: 4px;
+                            box-sizing: border-box;
+                            margin-top: 6px;
+                            margin-bottom: 16px;
+                            resize: vertical;
+                        }
+
+                        textarea {
+                            width: 100%;
+                            padding: 12px;
+                            border: 1px solid $colorPrimario;
+                            border-radius: 4px;
+                            box-sizing: border-box;
+                            margin-top: 6px;
+                            margin-bottom: 16px;
+                            resize: vertical;
+                        }
+                    }
+                }
+            }
+
+            div {
+                p {
+                    padding-bottom: 15px;
+                    font-weight: bold;
+                }
+            }
+
+            .notificaciones {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 20px;
+            }
+
+            .botones {
+                display: gridx;
+                justify-content: right;
+
+            }
+        }
+
+        @media only screen and (min-width: 1024px) {
+            position: relative;
+
+            .cuerpoForm {
+                margin: auto;
+                margin-bottom: 20px;
+                width: 60%;
+                font-size: medium;
+                font-weight: normal;
+
+                article {
+                    form {
+                        label {
+                            input {
+                                width: 100%;
+                                padding: 12px;
+                                border: 1px solid $colorPrimario;
+                                border-radius: 4px;
+                                box-sizing: border-box;
+                                margin-top: 6px;
+                                margin-bottom: 16px;
+                                resize: vertical;
+                            }
+
+                            textarea {
+                                width: 100%;
+                                padding: 12px;
+                                border: 1px solid $colorPrimario;
+                                border-radius: 4px;
+                                box-sizing: border-box;
+                                margin-top: 6px;
+                                margin-bottom: 16px;
+                                resize: vertical;
+                            }
+                        }
+                    }
+                }
+
+                div {
+                    p {
+                        padding-bottom: 15px;
+                        font-weight: bold;
+                    }
+                }
+
+                .notificaciones {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    padding-left: 20px;
+                }
+
+                .botones {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+
+    /*termina Contacto*/

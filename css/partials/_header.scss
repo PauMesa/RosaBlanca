@@ -1,90 +1,74 @@
-.cabezal{
-    padding: 0px;
-    background-color: rgb(163, 154, 146);
+header{
+    background-color: $colorFondoPrimario;
+    --bs-link-color: #9E0059;
+    --bs-link-hover-color: #9E0059;
+    background-color: $colorFondoSecundario;
     height: 100px;
-}
-
-.cabezal ul {
-    width: 100%;
-    height: 30px;
-}
-
-.cabezalMobile img{
-    margin: 0px;
-    padding: 0px;   
-}
-
-.cabezalMobile{
-    display: grid;
-    justify-content:left;
-    position: absolute;
-}
-
-.iconDropdown .btn-check:active+.btn, .btn-check:checked+.btn, .btn.active, .btn.show, .btn:active{
-    background-color: transparent;
-    border-color: transparent;
-}
-
-.btn-secondary{
-    --bs-btn-hover-bg: transparent
-}
-
-.dropdown-item{
-    background-color: rgb(72, 61, 63);
-    color: rgb(244, 235, 217);
-    width: 30%;
-}
-
-.dropdown-menu{
-    padding: 0px;
-    width: 100px;
-    --bs-dropdown-min-width: 500px;
-    --bs-dropdown-bg: transparent;
-}
-
-.nav{
-    --bs-nav-link-color: rgb(72, 61, 63);
-}
-
-@media only screen and (min-width: 1024px){
-
     .cabezalMobile{
-        display: none;
-    }
-
-    .cabezal{
-        background-color: rgb(163, 154, 146);
-        height: 80px;
-    }
-
-    .cabezal ul {
-        list-style: none;
+        display: grid;
+        justify-content:left;
+        position: absolute;
+        ul {
         width: 100%;
+        height: 30px;
+        padding: 0px;
+        --bs-dropdown-bg: transparent;
+            .dropdown-item{
+            background-color:$colorFondoSecundario;
+            color: $colorFondoPrimario;
+            width: 30%;
+            }    
+        }
+        img{
+        margin: 0px;
+        padding: 0px;   
+        }
+    }
+    @media only screen and (min-width: 1024px){
+        .visible {
+            visibility: hidden !important;
+        }
+        .invisible {
+            visibility: visible !important;
+        }
+        .nav{
+            --bs-nav-link-color: #fff;
+        }
+        background-color: $colorFondoSecundario;
         height: 80px;
-        display: flex;
-        align-items: center;
-    }
-
-    .cabezal ul li {
-        display: inline-block;
-        border: none;
-        width: 16%;
-        position:relative;
-        font-size: 18px;
-        font-weight: bold;
-        background-color: rgb(163, 154, 146);
-        text-align: center;
-        overflow: hidden;
-        vertical-align: middle;
-    }
-
-    img {
-        width: auto;
-        height: auto;
-    }
-
-    .cabezal :hover{
-        font-size: 20px;
-        font-weight: bolder;
+        div{
+            ul {
+                list-style: none;
+                width: 100%;
+                height: 80px;
+                display: flex;
+                align-items: center;
+                li {
+                    a{
+                        display: inline-block;
+                        border: none;
+                        width: auto;
+                        position: relative;
+                        font-size: 18px;
+                        font-weight: bold;
+                        background-color: $colorFondoSecundario;
+                        text-align: center;
+                        overflow: hidden;
+                        vertical-align: middle;
+                        color: $colorFondoPrimario; 
+                        &:hover{
+                            font-size: 20px;
+                            font-weight: bolder;
+                            color: $colorResaltador;
+                        }
+                    }
+                }
+                .imgHeader{
+                    width: auto;
+                    height: auto;
+                }
+            }
+        }
     }
 }
+    

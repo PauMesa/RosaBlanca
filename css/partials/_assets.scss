@@ -1,0 +1,40 @@
+/*Botones*/
+.iconDropdown .btn-check:active, .btn-check:checked+.btn, .btn.active, .btn.show, .btn:active{
+    background-color: transparent;
+    border-color: transparent;
+}
+.btn-secondary{
+    --bs-btn-hover-bg: transparent
+}
+.btn{
+    @extend %botonBase
+}
+.btn-search{
+    background-color: $colorFondoPrimario;
+    color: $colorFondoPrimario;
+    font-size: 18px;
+    padding-left: 10px;
+}
+h2{
+    @extend %h2Base
+}
+.btnContacto {
+    background-color: $colorBotonA;
+    border: 0ch;
+    color: $colorFondoPrimario;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.tituloAbUs{
+    @include h2mixin ($textColor: $colorSecundario)
+}
+.h2-Custom{
+    @include h2mixin ($textColor: $colorPrimario)
+}
+.saleCentral{
+    @include h2mixin ($textColor: $colorBotonA)
+}
+.h2-Contacto {
+    @include h2mixin ($textColor: $colorPrimario)
+}
