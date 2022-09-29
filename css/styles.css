@@ -92,7 +92,7 @@ header .cabezalMobile ul {
 header .cabezalMobile ul .dropdown-item {
   background-color: #000000;
   color: #fff;
-  width: 30%;
+  width: 150px;
 }
 header .cabezalMobile img {
   margin: 0px;
@@ -188,16 +188,11 @@ body .mainInicio section p {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-body .mainInicio section aside {
-  width: auto;
-  display: grid;
-  justify-content: center;
-}
 body .mainInicio section aside div {
-  width: auto;
+  text-align: center;
 }
 body .mainInicio section aside div img {
-  width: auto;
+  width: 80%;
   padding: 10px;
 }
 @media only screen and (min-width: 1024px) {
@@ -210,7 +205,7 @@ body .mainInicio section aside div img {
     text-align: center;
     justify-content: center;
   }
-  body .mainInicio section article div div img {
+  body .mainInicio section article div img {
     width: 800px;
     height: auto;
   }
@@ -233,9 +228,11 @@ body .mainInicio section aside div img {
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
     margin: 20px;
+    justify-items: center;
   }
   body .mainInicio section aside div img {
     padding: 20px;
+    width: auto;
   }
 }
 body .mainAbUs {
@@ -435,16 +432,22 @@ body .mainBoutique .galeriaTitulo .tituloGaleria .saleCentral {
           animation-iteration-count: infinite;
 }
 @-webkit-keyframes cartelCentral {
+  0% {
+    letter-spacing: 2px;
+  }
   50% {
-    letter-spacing: 10px;
+    letter-spacing: 6px;
   }
   100% {
     letter-spacing: 2px;
   }
 }
 @keyframes cartelCentral {
+  0% {
+    letter-spacing: 2px;
+  }
   50% {
-    letter-spacing: 10px;
+    letter-spacing: 6px;
   }
   100% {
     letter-spacing: 2px;
@@ -475,22 +478,14 @@ body .mainBoutique .galeriaVista .card {
   }
   @-webkit-keyframes cartel {
     50% {
-      letter-spacing: 10px;
       background-color: #FF5400;
       color: rgb(244, 235, 217);
-    }
-    100% {
-      letter-spacing: 2px;
     }
   }
   @keyframes cartel {
     50% {
-      letter-spacing: 10px;
       background-color: #FF5400;
       color: rgb(244, 235, 217);
-    }
-    100% {
-      letter-spacing: 2px;
     }
   }
   body .mainBoutique .galeriaTitulo .tituloGaleria .saleCentral {
@@ -502,20 +497,34 @@ body .mainBoutique .galeriaVista .card {
             animation-iteration-count: infinite;
   }
   @-webkit-keyframes cartelCentral {
+    0% {
+      letter-spacing: 2px;
+    }
     50% {
       color: #ffbd00;
+      letter-spacing: 4px;
+    }
+    100% {
+      letter-spacing: 2px;
     }
   }
   @keyframes cartelCentral {
+    0% {
+      letter-spacing: 2px;
+    }
     50% {
       color: #ffbd00;
+      letter-spacing: 4px;
+    }
+    100% {
+      letter-spacing: 2px;
     }
   }
   body .mainBoutique .galeriaVista {
     display: flex;
-    justify-content: center;
     border-color: #FF5400;
     border: 1px;
+    align-self: center;
   }
   body .mainBoutique .galeriaVista .compras .card {
     margin-top: 10px;
